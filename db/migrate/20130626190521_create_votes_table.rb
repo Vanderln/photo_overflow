@@ -5,6 +5,7 @@ class CreateVotesTable < ActiveRecord::Migration
       t.string :votable_type
       t.integer :user_id
       t.integer :direction
+      t.timestamps
     end
   end
 end

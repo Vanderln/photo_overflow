@@ -7,6 +7,7 @@ class CreateUsersTable < ActiveRecord::Migration
       t.string :file
       t.integer :reputation
       t.string :location
+      t.timestamps
     end
   end
 end

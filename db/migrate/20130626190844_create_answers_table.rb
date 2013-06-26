@@ -5,6 +5,7 @@ class CreateAnswersTable < ActiveRecord::Migration
       t.string :content
       t.string :file
       t.string :path
+      t.timestamps
     end
   end
 end
