@@ -32,7 +32,6 @@ group :development, :test do
 end
 
 gem 'carrierwave'
-gem 'fog'
 gem 'mini_magick'
 gem 'figaro'
 
@@ -47,3 +46,5 @@ gem 'figaro'
 
 # To use debugger
 gem 'debugger'
+
+gem "fog", "~> 1.3.1"
