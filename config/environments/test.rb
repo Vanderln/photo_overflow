@@ -35,9 +35,9 @@ PhotoOverflow::Application.configure do
   # Print deprecation notices to the stderr
   config.active_support.deprecation = :stderr
 
-  SETTINGS = YAML.load_file(File.expand_path('config/aws_test.yml', __FILE__))
-  SETTINGS.each_pair do |key, value|
-    ENV[key] = value
-  end
+  #   ENV[key] = value
+  # end
+  # SETTINGS = YAML.load_file(File.expand_path('config/aws_test.yml', __FILE__))
+  # SETTINGS.each_pair do |key, value|
 
 end

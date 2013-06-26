@@ -35,10 +35,10 @@ PhotoOverflow::Application.configure do
   # Expands the lines which load the assets
   config.assets.debug = true
 
-  SETTINGS = YAML.load_file(File.expand_path('config/aws_dev.yml', __FILE__))
-  SETTINGS.each_pair do |key, value|
-    ENV[key] = value
-  end
+  # SETTINGS = YAML.load_file(File.expand_path('config/aws_dev.yml', __FILE__))
+  # SETTINGS.each_pair do |key, value|
+  #   ENV[key] = value
+  # end
 
 
 end

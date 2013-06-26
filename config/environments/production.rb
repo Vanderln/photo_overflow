@@ -65,9 +65,4 @@ PhotoOverflow::Application.configure do
   # with SQLite, MySQL, and PostgreSQL)
   # config.active_record.auto_explain_threshold_in_seconds = 0.5
 
-  SETTINGS = YAML.load_file(File.expand_path('config/aws_prod.yml', __FILE__))
-  SETTINGS.each_pair do |key, value|
-    ENV[key] = value
-  end
-
 end
