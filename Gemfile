@@ -41,4 +41,8 @@ gem 'carrierwave'
 
 gem "fog", "~> 1.3.1"
 
+<<<<<<< Updated upstream
 gem "figaro"
+=======
+gem 'mini_magick'
+>>>>>>> Stashed changes
