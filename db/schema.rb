@@ -56,14 +56,14 @@ ActiveRecord::Schema.define(:version => 20130626192019) do
   end
 
   create_table "users", :force => true do |t|
-    t.string   "username",   :null => false
-    t.string   "password",   :null => false
-    t.string   "email",      :null => false
+    t.string   "username",        :null => false
+    t.string   "password_digest", :null => false
+    t.string   "email",           :null => false
     t.string   "file"
     t.integer  "reputation"
     t.string   "location"
-    t.datetime "created_at", :null => false
-    t.datetime "updated_at", :null => false
+    t.datetime "created_at",      :null => false
+    t.datetime "updated_at",      :null => false
   end
 
   create_table "votes", :force => true do |t|
