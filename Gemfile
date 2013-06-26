@@ -36,3 +36,13 @@ gem 'bcrypt-ruby', '~> 3.0.0'
 
 # To use debugger
 gem 'debugger'
+
+gem 'carrierwave'
+
+gem "fog", "~> 1.3.1"
+
+<<<<<<< Updated upstream
+gem "figaro"
+=======
+gem 'mini_magick'
+>>>>>>> Stashed changes
