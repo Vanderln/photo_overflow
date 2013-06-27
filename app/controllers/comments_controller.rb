@@ -9,13 +9,13 @@ class CommentsController < ApplicationController
     @comment = @commentable.comments.build(params[:comment])
     if @comment.save
       flash[:notice] = "Successfully created comment"
-      redirect_to :id => nil
+      redirect_to :back
     else
       render :action => 'new'
     end
   end
 
-private
+# private
 
   def find_commentable
     params.each do |name, value|

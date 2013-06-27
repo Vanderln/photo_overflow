@@ -8,7 +8,6 @@ class QuestionsController < ApplicationController
 
   def create
     Question.create(:file => params[:file], :title => params[:title], :content =>params[:content])
-
     redirect_to questions_path
   end
 
@@ -16,6 +15,6 @@ class QuestionsController < ApplicationController
     @question = Question.find(params[:id])
     @answer = Answer.new
     @question_answers = Answer.find_all_by_question_id(params[:id])
-    
   end
+
 end
