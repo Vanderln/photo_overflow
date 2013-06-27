@@ -5,6 +5,7 @@ class Question < ActiveRecord::Base
   has_many :tagclouds
   has_many :tags, through: :tagclouds
   belongs_to :user
+  has_many :answers
 
   mount_uploader :file, PhotoUploader
 end
