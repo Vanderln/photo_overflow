@@ -4,22 +4,15 @@ class AnswersController < ApplicationController
   end
 
   def new
+    @answer = Answer.new
   end
 
   def create
-    answer = Answer.new(params[:answer])
     question = Question.find(params[:question_id])
-    question.answers << answer
-
-    if answer.save
-      redirect_to question_path(question.id)
+    if Answer.submit_new_answer(params, question, current_user.id)
+      redirect_to question
     else
-      render question_path(question.id)
+      render question
     end
-  end
-
-  def show
-    @answer = Answer.find(params[:id])
-    @question_answers = Answer.find_all_by_question_id(params[:id])
   end
 end

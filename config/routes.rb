@@ -1,5 +1,5 @@
 PhotoOverflow::Application.routes.draw do
-  root :to => "questions#new"
+  root :to => "questions#index"
 
   resources :users
 
