@@ -47,4 +47,17 @@ gem 'figaro'
 # To use debugger
 gem 'debugger'
 
+group :test, :development do
+  gem 'better_errors'
+  gem 'binding_of_caller'
+  gem 'meta_request'
+  gem 'rspec-rails'
+  gem 'guard-rspec'
+end
+
 gem "fog", "~> 1.3.1"
+
+group :test do
+  gem 'database_cleaner'
+  gem 'factory_girl_rails'
+end

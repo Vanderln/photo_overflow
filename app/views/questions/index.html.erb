@@ -1,6 +1,10 @@
+
+
 <div class="all_container">
   <ul>
-    <%= render @questions.reverse %>
+    <% @questions.each do |question| %>
+      <%= question.title %>
+      <% end %>
 
   </ul>
 
