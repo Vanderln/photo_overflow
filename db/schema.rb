@@ -15,11 +15,12 @@ ActiveRecord::Schema.define(:version => 20130626192019) do
 
   create_table "answers", :force => true do |t|
     t.integer  "user_id"
+    t.integer  "question_id"
     t.string   "content"
     t.string   "file"
     t.string   "path"
-    t.datetime "created_at", :null => false
-    t.datetime "updated_at", :null => false
+    t.datetime "created_at",  :null => false
+    t.datetime "updated_at",  :null => false
   end
 
   create_table "comments", :force => true do |t|
@@ -57,7 +58,7 @@ ActiveRecord::Schema.define(:version => 20130626192019) do
 
   create_table "users", :force => true do |t|
     t.string   "username",        :null => false
-    t.string   "password_digest", :null => false
+    t.string   "password_digest"
     t.string   "email",           :null => false
     t.string   "file"
     t.integer  "reputation"
