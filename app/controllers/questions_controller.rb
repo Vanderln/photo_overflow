@@ -1,11 +1,10 @@
 class QuestionsController < ApplicationController
-
   def new
   end
 
   def index
-      @questions = Question.all 
-    end
+    @questions = Question.all 
+  end
 
   def create
     Question.create(:file => params[:file], :title => params[:title], :content =>params[:content])
@@ -15,5 +14,7 @@ class QuestionsController < ApplicationController
 
   def show
     @question = Question.find(params[:id])
+    @answers = Answer.all
+    @answer = Answer.new
   end
 end
