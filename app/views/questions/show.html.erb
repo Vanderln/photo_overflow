@@ -1,15 +1,27 @@
 <div class="single_container">
-  <div class="single_question">
-    <span class="title">
-      <h1> <%= @question.title %> </h1>
-      <h3> Asked by: <%= @question.user.username %></h3>
-    </span>
+<div class="single_question">
+  <span class="title">
+    <h1> <%= @question.title %> </h1>
+    <h3> Asked by: <%= @question.user.username %></h3>
+  </span>
+</div>
+<div class="photo_upload">
+  <p><img src="<%= @question.path || @question.file%>"></p>
+</div>
+<div class="description">
+  <p><%= @question.content %></p>
+</div>
+<div class="question_comments">
+  <%@question.comments.each do |qc| %>
+  <p> <%= qc.content %><br/>
+    Comment by: <%= qc.user.username %></p>
+    <%end%>
   </div>
-  <div class="photo_upload">
-    <p><img src="<%= @question.path || @question.file%>"></p>
-  </div>
-  <div class="description">
-    <p><%= @question.content %></p>
+  <div class="comment_form_for_question">
+    <%= form_for [@question, Comment.new] do |f| %>
+    <p><%= f.text_field :content, placeholder: 'Add comment here!' %></p>
+    <%= f.submit "Submit Comment" %>
+    <% end %>
   </div>
 
   <div class="answer_form">
@@ -19,13 +31,25 @@
 
   <div class="answers_all">
     <div class="first_line_all_question_answers"></div>
-      <div class="answer_upload">
-        <% @question_answers.each do |qa| %>
-        <img src="<%= qa.path || qa.file  %>">
-        <p>Answered by: <%= qa.user.username %></p>
-        <p><%= qa.content %></p>
-      <% end %>
-    </div>
+    <div class="answer_upload">
+      <% @question_answers.each do |qa| %>
+      <img src="<%= qa.path || qa.file  %>">
+      <p>Answered by: <%= qa.user.username %></p>
+      <p><%= qa.content %></p>
+      <div class="answer_comments">
+        <% qa.comments.each do |qac| %>
+        <p> <%= qac.content %><br/>
+          Comment by: <%= qac.user.username %></p>
+          <% end %>
+        </div>
+        <div class="comment_form_for_answer">
+          <%= form_for [qa, Comment.new] do |f| %>
+          <p><%= f.text_field :content, placeholder: 'Add comment here!' %></p>
+          <%= f.submit "Submit Comment" %>
+          <% end %>
+          <% end %>
+        </div>
+      </div>
+    </div>  
   </div>
-
 </div>
