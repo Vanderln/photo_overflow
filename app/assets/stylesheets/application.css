@@ -11,3 +11,12 @@
  *= require_self
  *= require_tree .
  */
+
+
+.photo_upload img {
+  width: 600px;
+}
+
+.answer_upload img {
+  width: 250px;
+}

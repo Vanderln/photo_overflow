@@ -2,26 +2,35 @@
   <div class="single_question">
     <span class="title">
       <h1> <%= @question.title %> </h1>
+      <h3> Asked by: <%= @question.user.username %></h3>
     </span>
   </div>
   <div class="photo_upload">
-    <p><img src="<%= @question.file%>"></p>
+    <p><img src="<%= @question.path || @question.file%>"></p>
   </div>
   <div class="description">
     <p><%= @question.content %></p>
   </div>
 
   <div class="answer_form">
-  <h3>Add an answer</h3>
+    <h3>Add an answer</h3>
     <%= render "answers/new" %>
-
   </div>
 
   <div class="answers_all">
-    <%= render @answers %>
+    <div class="first_line_all_question_answers"></div>
+      <div class="answer_upload">
+        <% @question_answers.each do |qa| %>
+        <img src="<%= qa.path || qa.file  %>">
+        <p>Answered by: <%= qa.user.username %></p>
+        <p><%= qa.content %></p>
+      <% end %>
+    </div>
   </div>  
+
 
   <div class="comments_all">
   <%= render @comments %>
   </div>
+
 </div>
