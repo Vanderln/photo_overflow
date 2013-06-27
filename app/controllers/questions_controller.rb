@@ -16,5 +16,6 @@ class QuestionsController < ApplicationController
     @question = Question.find(params[:id])
     @answer = Answer.new
     @question_answers = Answer.find_all_by_question_id(params[:id])
+    
   end
 end

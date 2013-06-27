@@ -94,6 +94,17 @@ http://distilleryimage2.ak.instagram.com/a11a85c6723811e2a12822000a9f18f6_7.jpg
 http://distilleryimage4.ak.instagram.com/87faa73c4b3311e2806d22000a1f9e4d_7.jpg
 ANSWER_URLS
 
+
+comment_content = <<-COMMENT_CONTENT
+Dang!
+Lame
+Anyone could do that
+This is just perfect.
+What?
+I don't get it.
+Love this    
+COMMENT_CONTENT
+
 user_seed = users.each_line.to_a
 email_seed = emails.each_line.to_a
 question_titles_seed = question_titles.each_line.to_a
@@ -101,12 +112,14 @@ paths_seed = paths.each_line.to_a
 quest_content_seed = quest_content.each_line.to_a
 answers_content_seed = acontent.each_line.to_a
 answer_urls_seed = answer_urls.each_line.to_a
+comment_content_seed = comment_content.each_line.to_a
 
 user_seed.each do |u|
   user = User.create(
     username: u.strip,
     email: email_seed.shift.strip,
-    :password => "foxinsocks")
+    password: "foxinsocks"
+    )
 end
 
 allusers = ((1..12).to_a).shuffle
@@ -140,4 +153,10 @@ someqs = ((1..5).to_a).shuffle
     )
 end
 
-
+allusers = ((1..12).to_a).shuffle
+5.times do 
+  comment = Comment.create(
+     user_id: allusers.sample,
+     content: comment_content_seed.sample.strip
+    )
+end
