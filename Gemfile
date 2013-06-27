@@ -60,4 +60,6 @@ gem "fog", "~> 1.3.1"
 group :test do
   gem 'database_cleaner'
   gem 'factory_girl_rails'
+  gem 'shoulda-matchers'
+  gem 'shoulda-context'
 end
