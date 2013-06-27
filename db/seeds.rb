@@ -154,9 +154,24 @@ someqs = ((1..5).to_a).shuffle
 end
 
 allusers = ((1..12).to_a).shuffle
+allas = ((1..11).to_a).shuffle
 5.times do 
   comment = Comment.create(
      user_id: allusers.sample,
-     content: comment_content_seed.sample.strip
+     content: comment_content_seed.sample.strip,
+     commentable_type: "Answer",
+     commentable_id: allas.pop
+    )
+end
+
+
+allusers = ((1..12).to_a).shuffle
+allas = ((1..11).to_a).shuffle
+8.times do 
+  comment = Comment.create(
+     user_id: allusers.sample,
+     content: comment_content_seed.sample.strip,
+     commentable_type: "Question",
+     commentable_id: allas.pop
     )
 end
