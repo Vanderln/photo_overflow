@@ -1,0 +1,18 @@
+<div class="single_container">
+  <ul>
+    <li>
+      <div class="first_line_all_questions">
+        <span class="title">
+          <%= link_to @question.title, @question_path %>
+        </span></div>
+        <div class="photo_upload">
+        <p><a href="#"><img src="<%= @question.file%>"></a></p>
+      </div>
+        <div class="description">
+        <p><%= @question.content %></p>
+      </div>
+    </li>
+  </ul>
+  <%= form_for answer do |f| %>
+  <%=f.%>
+</div>

@@ -1,0 +1,10 @@
+<li>
+  <div class="first_line_all_questions">
+    <span class="title">
+      <%= link_to question.title, question_path(question.id) %>
+    </span></div>
+    <div class="photo_upload">
+    <a href="#"><img src="<%= question.file.thumb%>"></a>
+
+  </div>
+</li>
