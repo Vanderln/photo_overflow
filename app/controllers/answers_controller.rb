@@ -8,8 +8,8 @@ class AnswersController < ApplicationController
   end
 
   def create
-    question = Question.find(params[:question_id])
-    if Answer.submit_new_answer(params, question, current_user.id)
+    question = Question.find(params[:answer][:question_id])
+    if Answer.create(params[:answer].merge(:user_id => current_user.id))
       redirect_to question
     else
       render question

@@ -14,7 +14,7 @@ class QuestionsController < ApplicationController
   def show
     @answer = Answer.new
     @question = Question.find(params[:id])
-    @question_answers = Answer.find_all_by_question_id(params[:id])
+    @question_answers = @question.answers
   end
 
 end
