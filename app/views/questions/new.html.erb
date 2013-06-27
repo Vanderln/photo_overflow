@@ -1,0 +1,8 @@
+<div>
+  <%= form_tag({ :action => :create, :controller => :questions }, :multipart => true) do %>
+        <%= text_field_tag :title, nil, placeholder: "enter question" %>
+        <%= file_field_tag :file %>
+        <p><%= text_area_tag :content, nil , rows: 4 , cols: 9, placeholder: 'Add add"l info here!'  %></p>
+        <%= submit_tag("Upload") %>
+      <% end %>
+</div>

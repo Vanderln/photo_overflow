@@ -25,6 +25,16 @@ gem 'jquery-rails'
 # To use ActiveModel has_secure_password
 gem 'bcrypt-ruby', '~> 3.0.0'
 
+group :development, :test do 
+  gem 'better_errors'
+  gem 'binding_of_caller'
+  gem 'meta_request'
+end
+
+gem 'carrierwave'
+gem 'mini_magick'
+gem 'figaro'
+
 # To use Jbuilder templates for JSON
 # gem 'jbuilder'
 
@@ -45,8 +55,9 @@ group :test, :development do
   gem 'guard-rspec'
 end
 
+gem "fog", "~> 1.3.1"
+
 group :test do
   gem 'database_cleaner'
   gem 'factory_girl_rails'
 end
-
