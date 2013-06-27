@@ -13,14 +13,18 @@
   </div>
 
   <div class="answer_form">
-  <h3>Add an answer</h3>
+    <h3>Add an answer</h3>
     <%= render "answers/new" %>
-
   </div>
 
   <div class="answers_all">
-    <%= render @answers %>
+    <div class="first_line_all_question_answers"></div>
+      <div class="answer_upload">
+        <% @question_answers.each do |qa| %>
+        <img src="<%= qa.path || qa.file  %>">
+        <p>Answered by: <%= qa.user.username %></p>
+        <p><%= qa.content %></p>
+      <% end %>
+    </div>
   </div>  
-
-
 </div>
