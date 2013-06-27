@@ -1,10 +1,9 @@
-<li>
-  <div class="first_line_all_questions">
-    <span class="title">
-      <%= link_to question.title, question_path(question.id) %>
-    </span></div>
-    <div class="photo_upload">
-    <a href="#"><img src="<%= question.file.thumb%>"></a>
+<div class="first_line_all_questions">
+  <span class="title">
+    <%= link_to question.title, question_path(question.id) %>
+  </span></div>
+  <p> Asked by: <%= question.user.username %></p>
+  <div class="photo_upload">
+  <img src="<%= question.path || question.file.thumb %>">
+</div>
 
-  </div>
-</li>

@@ -1,7 +1,7 @@
 <div>
   <%= form_tag({ :action => :create, :controller => :photos }, :multipart => true) do %>
-        <%= text_field_tag :title, placeholder: "enter title" %>
-        <%= file_field_tag :file %>
-        <%= submit_tag("Upload") %>
-      <% end %>
+    <%= text_field_tag :title, placeholder: "enter title" %>
+    <%= file_field_tag :file %>
+    <%= submit_tag("Upload") %>
+  <% end %>
 </div>

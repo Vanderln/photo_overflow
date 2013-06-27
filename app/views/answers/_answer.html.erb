@@ -1,11 +1,6 @@
-<li>
-  <div class="first_line_all_answers"></div>
-    <div class="photo_upload">
-    <img src="<%= answer.file %>">
-    <p><%= answer.content %></p>
-  </div>
-</li>
-
-
-
-
+<div class="first_line_all_answers"></div>
+  <div class="answer_upload">
+  <img src="<%= question_answer.path || question_answer.file  %>">
+  <p>Answered by: <%= question_answer.user.username %></p>
+  <p><%= question_answer.content %></p>
+</div>
