@@ -1,0 +1,7 @@
+<div class="container">
+  <%= form_for @answer, :multipart => true, url: question_answers_path(@question) do |f| %>
+      <%= f.file_field :file %>
+      <p><%= f.text_area :content, rows: 4 , cols: 9, placeholder: 'Add add"l info here!'  %></p>
+      <%= f.submit "Submit Answer" %>
+    <% end %>
+</div>
