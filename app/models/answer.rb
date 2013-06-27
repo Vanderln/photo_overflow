@@ -6,4 +6,12 @@ class Answer < ActiveRecord::Base
   belongs_to :question
 
   mount_uploader :file, PhotoUploader
+
+  def self.submit_new_answer(params, question, current_user_id)
+    answer = question.answers.build(
+      params[:answer],
+      question_id: question.id,
+      user_id: current_user_id)
+    answer.save ? answer : false
+  end
 end

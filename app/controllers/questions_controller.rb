@@ -3,7 +3,7 @@ class QuestionsController < ApplicationController
   end
 
   def index
-    @questions = Question.all 
+    @questions = Question.all
   end
 
   def create
@@ -13,9 +13,8 @@ class QuestionsController < ApplicationController
   end
 
   def show
-    @question = Question.find(params[:id])
     @answer = Answer.new
+    @question = Question.find(params[:id])
     @question_answers = Answer.find_all_by_question_id(params[:id])
-    
   end
 end
