@@ -1,0 +1,13 @@
+<%= stylesheet_link_tag "user_profile" %>
+<div class="main_content">
+<h1> Account Page </h1>
+<h2> Questions of <%= @current_user.username%> </h2>
+<%= render partial: "subnav"%>
+
+<% if @questions %>
+  <%= render @questions.reverse %>
+<% else %>
+  <p> You have not yet asked a question </p>
+<% end %>
+</div>
+
