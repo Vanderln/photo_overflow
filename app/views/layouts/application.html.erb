@@ -6,14 +6,20 @@
   <%= javascript_include_tag "application" %>
   <script src="//use.edgefonts.net/arapey.js"></script>
 <script src="//use.edgefonts.net/josefin-sans.js"></script>
+<link href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css" rel="stylesheet">
   <%= csrf_meta_tags %>
 </head>
 <body>
 <header>
-  <a href="/">PhotoOverflow</a></div>
-  <%= render 'shared/navbar' %>
+  <%= link_to "PhotoOverflow", root_path %></div>
+  <%= render 'shared/navbar' %>  
 </header>
+<div class="ask_q"><%= link_to ask_question_path  do %>
+<i class="icon-question-sign"></i> Ask a question
+  <% end %>
+</div>
+<div class="container">
 <%= yield %>
-
+</div>
 </body>
 </html>

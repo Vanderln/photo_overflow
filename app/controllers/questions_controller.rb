@@ -18,4 +18,12 @@ class QuestionsController < ApplicationController
     @question_answers = @question.answers
   end
 
+  def ask_question
+    if current_user
+      redirect_to new_question_path
+    else
+      redirect_to '/login'
+    end
+  end
+
 end
