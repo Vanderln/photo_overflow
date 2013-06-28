@@ -1,4 +1,3 @@
-<div class="single_container">
 <div class="single_question">
   <ul id='voting-panel'>
     <%= render partial: 'shared/voting', locals: { votable: @question } %>
@@ -22,7 +21,7 @@
 <p><%= render partial: 'comments/new', locals: { commentable: @question } %></p>
 
 <div class="answer_form">
-  <h3>Add an answer</h3>
+  <h3>Answers</h3>
   <%= render "answers/new" %>
 </div>
 
