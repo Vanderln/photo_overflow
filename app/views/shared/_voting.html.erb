@@ -1,0 +1,7 @@
+<%= link_to question_votes_path(votable, direction: 1), method: :post do %>
+<i class="icon-chevron-sign-up"></i>
+<% end %>
+<%= votable.votes_count %>
+<%= link_to question_votes_path(votable, direction: 0), method: :post do %>
+<i class="icon-chevron-sign-down"></i>
+<% end %>
