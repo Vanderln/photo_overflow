@@ -1,12 +1,9 @@
-<ul id='voting-panel'>
-  <%= render partial: 'shared/voting', locals: { votable: answer } %>
-</ul>
-
 <div class="first_line_all_answers"></div>
   <div class="answer_upload">
   <img src="<%= answer.path || answer.file  %>">
-  <p>Answered by: <%= answer.user.username %></p>
-  <p><%= answer.content %></p>
+  <div class="answer"><span class="answer-vote" id='voting-panel'>
+    <%= render partial: 'shared/voting', locals: { votable: answer } %>
+  </span><%= answer.content %><span class="username">Answer by: <%= answer.user.username %></span></div>
 </div>
 
 <% answer.comments.each do |comment| %>
