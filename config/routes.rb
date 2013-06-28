@@ -9,8 +9,9 @@ PhotoOverflow::Application.routes.draw do
   
   resources :questions, only: [] do
     resources :comments
-    resources :votes
   end
+
+  resources :votes
   
   resources :answers, only: [] do
     resources :comments
