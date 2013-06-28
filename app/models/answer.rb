@@ -1,4 +1,5 @@
 class Answer < ActiveRecord::Base
+  include VotableHelper
   attr_accessible :content, :file, :path, :user_id, :question_id
   has_many :votes, as: :votable
   has_many :comments, as: :commentable
