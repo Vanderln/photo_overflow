@@ -62,4 +62,6 @@ group :test do
   gem 'factory_girl_rails'
   gem 'shoulda-matchers'
   gem 'shoulda-context'
+  gem 'capybara'
+  gem 'selenium-webdriver'
 end
