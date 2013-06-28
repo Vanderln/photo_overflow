@@ -1,0 +1,18 @@
+<table>
+<tr>
+  <td>Username: </td>
+  <td><%= @current_user.username %></td>
+</tr>
+<tr>
+  <td>Questions: </td>
+  <td><%= @current_user.questions.count %></td>
+</tr>
+<tr>
+  <td>Answers: </td>
+  <td><%= @current_user.answers.count %></td>
+</tr>
+<tr>
+  <td>Comments: </td>
+  <td><%= @current_user.comments.count %></td>
+</tr>
+</table>
