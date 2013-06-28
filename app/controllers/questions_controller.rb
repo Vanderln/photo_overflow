@@ -20,8 +20,6 @@ class QuestionsController < ApplicationController
 
   def ask_question
     if current_user
-      # self is like ... QuestionsController?
-      # Question.new.create??
       redirect_to new_question_path
     else
       redirect_to '/login'
