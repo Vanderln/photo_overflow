@@ -2,7 +2,7 @@
   <i class="icon-chevron-sign-up"></i>
 <% end %>
 
-<%= votable.votes_count %>
+<span><%= votable.votes_count %></span>
 
 <%= link_to votes_path(votable_id: votable.id, votable_type: votable.class, direction: 0), method: :post do %>
   <i class="icon-chevron-sign-down"></i>
