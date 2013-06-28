@@ -23,4 +23,6 @@ PhotoOverflow::Application.routes.draw do
   get '/logout'  => 'sessions#destroy'
   get '/signup'  => 'users#new'
   post '/signup' => 'users#create'
+  get '/users/:id/profile_questions' => 'users#profile_questions', as: :profile_questions
+  get '/users/:id/profile_answers' => 'users#profile_answers', as: :profile_answers
 end
