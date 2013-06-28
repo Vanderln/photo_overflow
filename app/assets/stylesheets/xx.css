@@ -29,7 +29,7 @@ fieldset, img {
     border: 0;
 }
 
-input, textarea, select, button {
+.user_creation input, textarea, select, button {
     font-family: arapey, sans-serif;
     font-size: 110%;
     line-height: 1.1;
@@ -51,19 +51,20 @@ li {
 }
 
 header {
-    position: fixed;
-    bottom: 0;
-    left: 0;
-    height: 150px;
-    width: 20%;
-    color: #FFF4F0;
-    font-size: 60px;
-    font-family: arapey, sans-serif;
-    margin-left: 20px;
+  background-color: #f2e8e1;
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 80px;
+  width: 150px;
+  color: #FFF4F0;
+  font-size: 60px;
+  font-family: arapey, sans-serif;
+  margin-left: 20px;
 }
 
 header a:link {
-    text-decoration: none
+    text-decoration: none;
     color: #B82D22;
 }
 
@@ -72,26 +73,43 @@ header a:hover {
 }
 
 .username {
-/*  float: right;*/
-  text-align: center;
+  float: right;
   font-size: 12px;
   line-height: 16px;
   text-transform:uppercase;
-  letter-spacing: -0.5px;
   font-family: josefin-sans, sans-serif;
-    color: #061021;
-    margin-bottom: 10px;
+  color: #061021;
+  margin-bottom: 10px;
+}
+
+.username-comment {
+  float: right;
+  font-size: 10px;
+  line-height: 14px;
+  text-transform:uppercase;
+  font-family: josefin-sans, sans-serif;
+  color: #061021;
+  margin-bottom: 10px;
 }
 
 .answer_form {
-  float: right;
-  width: 80%;
+  width: 100%;
   margin: 20px auto;
   font-size: 14px;
   line-height: 18px;
 }
 
-.answer_form input {
+.answer_form h3{
+  margin-top: 10px;
+  font-family: arapey, sans-serif;
+  text-transform: uppercase;
+}
+
+
+.answer_upload {
+  margin-top:20px;
+}
+/*.answer_form input {
   margin-bottom: 20px;
   margin-left: 10px;
 }
@@ -99,18 +117,24 @@ header a:hover {
 .answer_form input[type="text"] {
   margin-bottom: 20px;
   margin-left: 10px;
-  width: 300px;
+}*/
+
+.answer_form input, textarea {
+    font-family: arapey, sans-serif;
+    font-size: 110%;
+    line-height: 1.1;
+    text-align: left;
 }
 
-.answer_form input[type="textarea"] {
+/*.answer_form input[type="textarea"] {
   margin-bottom: 20px;
   margin-left: 10px;
   width: 300px;
-}
+}*/
 
-.answer_form label {
+/*.answer_form label {
   margin-right: 20px;
-}
+}*/
 
 .result-image.example { display: none;}
 .result-image {
@@ -166,13 +190,70 @@ input[type=submit]:hover {
   margin-left: 50px;
 }
 
-/*  COLORS  
+.comment-input {
+  position: relative;
+  float:left;
+}
 
---- Navy Sunrise ---
+.comment-submit {
+  float: right;
+}
 
-Navy #061021
-Powder Blue #5A78B0
-Off White #FFF4F0
-Beige #EBCEBA
-Reddish #B82D22
-*/
+.question_form {
+  margin-top: 20px;
+  width: 320px;
+}
+
+.question_field {
+  width:400px;
+  margin-bottom: 20px;
+  font-family: arapey, sans-serif;
+  font-size: 110%;
+  line-height: 1.1;
+}
+
+.question_file {
+  width:400px;
+  margin-bottom: 10px;
+  font-family: arapey, sans-serif;
+  font-size: 110%;
+  margin-left: 0;
+}
+
+.question_form_intro {
+  font-family: arapey, sans-serif;
+  font-size: 16px;
+  margin-top: 100px;
+  margin-bottom: 10px;
+  text-align: left;
+  width: 400px;
+}
+
+.question_form input, textarea {
+    font-family: arapey, sans-serif;
+    font-size: 110%;
+    line-height: 1.1;
+    text-align: left;
+}
+
+.answer_form_intro {
+  margin-top:20px;
+  font-family: arapey, sans-serif;
+  font-size: 16px;
+  margin-bottom: 10px;
+  padding-bottom: 10px;
+  text-align: left;
+  width: 400px;
+}
+
+.answer_form input, textarea {
+    font-family: arapey, sans-serif;
+    font-size: 110%;
+    line-height: 1.1;
+    text-align: left;
+}
+
+.comment_on_question {
+  margin: 10px auto;
+  text-align: center;
+}

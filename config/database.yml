@@ -41,6 +41,12 @@ test:
   encoding: UTF8
   database: photo_overflow_test
   host: localhost
+ 
+development:
+  adapter: postgresql
+  encoding: UTF8
+  database: photo_overflow_development
+  host: localhost 
   
 production:
   adapter: postgresql

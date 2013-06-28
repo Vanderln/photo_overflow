@@ -8,23 +8,9 @@
   border-radius: 15px;
 }
 
-
-header {
-    position: fixed;
-    top: 0;
-    left: 0;
-    height: 60px;
-    width: 400px;
-    font-size: 50px;
-    padding-left: 20px;
-    padding-top: 10px;
-    margin-bottom: 25px;
-}
-
 nav {
-  float: right;
-  font-size: 16px;
-  padding-right: 35px;
+  font-size: 18px;
+  color: black;
 }
 
 .container {
@@ -86,6 +72,9 @@ nav {
 
 .description {
   font-family: arapey, sans-serif;
+  border-bottom: 1px dotted gray;
+  margin-top: 10px;
+  padding-bottom: 5px;
 }
 
 .ask_q {
@@ -96,6 +85,31 @@ nav {
   font-family: arapey, sans-serif;
 }
 
+.comment {
+  font-family: josefin-sans, sans-serif;
+  margin-bottom: 10px;
+  margin-top: 5px;
+}
+
+.question-vote {
+  float: left;
+  width:20px;
+  text-align: center;
+  font-family: josefin-sans, sans-serif;
+  font-size: 24px;
+}
+
+.answer {
+  font-family: josefin-sans, sans-serif;
+  font-size: 24px;
+  margin-bottom: 10px;
+  margin-top: 5px;
+}
+
+.answer-vote {
+  margin-right:40px;
+  font-size: 14px;
+}
 /*
  dark blue #002E40
  lighter blue #2A5769
