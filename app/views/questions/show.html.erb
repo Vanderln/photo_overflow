@@ -1,5 +1,10 @@
 <div class="single_container">
 <div class="single_question">
+  <ul id='voting-panel'>
+    <%= link_to "Up", question_votes_path(@question, direction: 1), method: :post %>
+    <%= @question.votes_count %>
+    <%= link_to "Down", question_votes_path(@question, direction: 0), method: :post %>
+  </ul>
   <span class="title">
     <h1> <%= @question.title %> </h1>
     <h3> Asked by: <%= @question.user.username %></h3>
