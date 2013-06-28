@@ -4,10 +4,15 @@
   <title>PhotoOverflow</title>
   <%= stylesheet_link_tag    "application", :media => "all" %>
   <%= javascript_include_tag "application" %>
+  <script src="//use.edgefonts.net/arapey.js"></script>
+<script src="//use.edgefonts.net/josefin-sans.js"></script>
   <%= csrf_meta_tags %>
 </head>
 <body>
-<%= render 'shared/navbar' %>
+<header>
+  <a href="/">PhotoOverflow</a></div>
+  <%= render 'shared/navbar' %>
+</header>
 <%= yield %>
 
 </body>
