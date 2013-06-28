@@ -1,0 +1,178 @@
+* {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    -webkit-appearance: none;
+}
+
+a:-webkit-any-link {
+    text-decoration: none;
+    color: #B82D22;
+}
+
+a:hover {
+    color: #061021;
+}
+
+html, body, ul, ol, li, form,
+fieldset, legend {
+    background-color: #f2e8e1;
+    margin: 0;
+    padding: 0;
+}
+
+h1, h2, h3, h4, h5, h6, p {
+    margin-top: 0;
+}
+
+fieldset, img {
+    border: 0;
+}
+
+input, textarea, select, button {
+    font-family: arapey, sans-serif;
+    font-size: 110%;
+    line-height: 1.1;
+}
+
+button {
+    width: auto;
+    overflow: visible;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+
+li {
+    list-style: none;
+}
+
+header {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    height: 150px;
+    width: 20%;
+    color: #FFF4F0;
+    font-size: 60px;
+    font-family: arapey, sans-serif;
+    margin-left: 20px;
+}
+
+header a:link {
+    text-decoration: none
+    color: #B82D22;
+}
+
+header a:hover {
+    color: #061021;
+}
+
+.username {
+/*  float: right;*/
+  text-align: center;
+  font-size: 12px;
+  line-height: 16px;
+  text-transform:uppercase;
+  letter-spacing: -0.5px;
+  font-family: josefin-sans, sans-serif;
+    color: #061021;
+    margin-bottom: 10px;
+}
+
+.answer_form {
+  float: right;
+  width: 80%;
+  margin: 20px auto;
+  font-size: 14px;
+  line-height: 18px;
+}
+
+.answer_form input {
+  margin-bottom: 20px;
+  margin-left: 10px;
+}
+
+.answer_form input[type="text"] {
+  margin-bottom: 20px;
+  margin-left: 10px;
+  width: 300px;
+}
+
+.answer_form input[type="textarea"] {
+  margin-bottom: 20px;
+  margin-left: 10px;
+  width: 300px;
+}
+
+.answer_form label {
+  margin-right: 20px;
+}
+
+.result-image.example { display: none;}
+.result-image {
+  float: left;
+  width: 308px;
+  height: 350px;
+  margin-right: 10px;
+}
+
+.user_container {
+  width: 60%;
+  margin: 20px auto;
+  padding-right: 15px;
+}
+
+.user_container img{
+  width: 80%;
+}
+
+.modify_sidebar {
+  width: 200px;
+  float:right;
+  margin-top: 20px;
+  margin-right:100px;
+}
+
+.created_albums {
+  width: 500px;
+}
+
+.date {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.second_line_faves{
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+input[type=submit] {
+  background-color: #5A78B0;
+  color: #FFF4F0;
+  border: 0;
+  vertical-align: middle;
+}
+
+input[type=submit]:hover {
+  background-color: #B82D22;
+}
+
+#modify_icons {
+  margin-left: 50px;
+}
+
+/*  COLORS  
+
+--- Navy Sunrise ---
+
+Navy #061021
+Powder Blue #5A78B0
+Off White #FFF4F0
+Beige #EBCEBA
+Reddish #B82D22
+*/

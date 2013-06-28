@@ -1,0 +1,94 @@
+.photo_upload img {
+  width: 400px;
+  border-radius: 15px;
+}
+
+.answer_upload img {
+  width: 250px;
+  border-radius: 15px;
+}
+
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 60px;
+    width: 100%;
+    font-size: 50px;
+    padding-left: 20px;
+    padding-top: 10px;
+    padding-bottom: 25px;
+}
+
+nav {
+  float: right;
+  font-size: 16px;
+  padding-right: 35px;
+}
+
+.all_container {
+  width:100%;
+  margin: 50px auto;
+  padding-top: 20px;
+  text-align:center;
+}
+
+.questions {
+  margin-bottom: 100px;
+}
+
+.first_line_all_questions {
+  font-size: 24px;
+}
+
+.title {
+  margin-bottom: 10px;
+}
+
+.title h1{
+  margin-bottom: 10px;
+  font-family: arapey, sans-serif;
+}
+
+.title_username {
+  margin-bottom: 10px;
+  font-family: josefin-sans, sans-serif;
+  font-size: 14px;
+}
+
+.photo_upload {
+  margin-top: 10px;
+  margin-bottom: 30px;
+}
+
+.single_container {
+  width:600px;
+  margin: 80px auto;
+  padding-top: 20px;
+}
+
+.single_photo_upload img {
+  width: 90%;
+  border-radius: 15px;
+}
+
+.user_creation {
+  width: 150px;
+  margin: 120px auto;
+}
+
+.description {
+  font-family: arapey, sans-serif;
+}
+
+
+
+/*
+ dark blue #002E40
+ lighter blue #2A5769
+ white #FFFFFF
+ light yellow #FABD4A
+ mustard #FA9600
+
+*/
