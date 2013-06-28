@@ -1,4 +1,6 @@
-<%= form_for [@commentable, Comment.new] do |f| %>
-  <p><%= f.text_field :content, placeholder: 'Add comment here!' %></p>
-  <%= f.submit "Submit Comment" %>
-<% end %>
+<div class="comment_form">
+  <%= form_for [commentable, Comment.new] do |f| %>
+    <%= f.text_field :content, placeholder: "Add comment for #{commentable.class} here!" %>
+    <%= f.submit "Submit Comment" %>
+  <% end %>
+</div>
