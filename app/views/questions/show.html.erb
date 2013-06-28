@@ -1,12 +1,11 @@
-<div class="single_container">
 <div class="single_question">
-  <ul id='voting-panel'>
-    <%= render partial: 'shared/voting', locals: { votable: @question } %>
-  </ul>
   <span class="title">
     <h1> <%= @question.title %> </h1>
     <h3> Asked by: <%= @question.user.username %></h3>
   </span>
+</div>
+<div class="question-vote" id='voting-panel'>
+  <%= render partial: 'shared/voting', locals: { votable: @question } %>
 </div>
 <div class="single_photo_upload">
   <p><img src="<%= @question.path || @question.file%>"></p>
@@ -15,14 +14,15 @@
   <p><%= @question.content %></p>
 </div>
 
+<div class="comment_on_question">
 <% @question.comments.each do |comment| %>
   <%= render partial: 'comments/comment', locals: { comment: comment } %>
 <% end %>
 
 <p><%= render partial: 'comments/new', locals: { commentable: @question } %></p>
-
+</div>
 <div class="answer_form">
-  <h3>Add an answer</h3>
+  <h3>Answers</h3>
   <%= render "answers/new" %>
 </div>
 
