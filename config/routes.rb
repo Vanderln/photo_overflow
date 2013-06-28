@@ -2,6 +2,7 @@ PhotoOverflow::Application.routes.draw do
   root :to => "questions#index"
 
   resources :users
+  resources :tags
 
   resources :questions do
     resources :answers 
@@ -16,6 +17,7 @@ PhotoOverflow::Application.routes.draw do
   resources :answers, only: [] do
     resources :comments
   end
+
 
   get '/ask' => 'questions#ask_question', as: :ask_question
 

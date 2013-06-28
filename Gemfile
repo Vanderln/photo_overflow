@@ -53,6 +53,7 @@ group :test, :development do
   gem 'meta_request'
   gem 'rspec-rails'
   gem 'guard-rspec'
+  gem 'faker'
 end
 
 gem "fog", "~> 1.3.1"
