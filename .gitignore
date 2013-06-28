@@ -20,3 +20,7 @@
 # Ignore application configuration
 /config/application.yml
 /public/uploads
+
+
+# Ignore seed file
+/db/seeds.rb
