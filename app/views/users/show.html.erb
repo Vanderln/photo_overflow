@@ -1,2 +1,32 @@
 <h1> Account Page </h1>
-<p><%= @user %></p>
+<br>
+<br>
+<br>
+<div class="subnavbar_user_profile">
+  <p><%= link_to "Summary", root_path %></p>
+  <p><%= link_to "My Questions", root_path %></p>
+  <p><%= link_to "My Answers", root_path %></p>
+  <p><%= link_to "My Tabs", root_path %></p>
+<div>
+<br>
+<br>
+
+<!-- # Profile Page
+# Welcome Username
+# Tabs: Summary, My Questions, My Answers, My Tabs(to come), Edit
+# User Info
+# Widget Page -->
+
+<!-- # Questions Main Page (Limit 10) -->
+<% if @questions %>
+  <%= render @questions.reverse %>
+<% else %>
+  <p> You have not yet asked a question </p>
+  <!-- Link to ask a question now -->
+<% end %>
+
+<!-- # Answers Main Page (Limit 10)
+# To come -->
+
+<!-- # Comments Main Page (Limit 10)
+# To come -->
