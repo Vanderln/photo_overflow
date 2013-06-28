@@ -1,12 +1,12 @@
 $(document).ready(function() {
-  $('a').click(function(click) {
+  $('a.vote').click(function(click) {
     click.stopPropagation();
     click.preventDefault();
     link = $(this)
     data = $(this).attr('href')
-    $.post(data, function(data) {
-      console.log(data);
-      link.siblings('span').html(data.votes_count);
+    $.post(data, function(response) {
+      link.siblings('span').html(response.votes_count);
+
     });
   });
 });
