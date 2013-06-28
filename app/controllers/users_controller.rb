@@ -7,6 +7,9 @@ class UsersController < ApplicationController
     @user = User.new
   end
 
+  def edit
+  end
+
   def create
     @user = User.new(params[:user])
     if @user.save
@@ -15,5 +18,10 @@ class UsersController < ApplicationController
     else
       render new_user_path
     end
+  end
+
+  def show
+    @questions = Question.find_by_user_id(current_user.id)
+    @answers = Answer.find_by_user_id(current_user.id)
   end
 end
