@@ -14,11 +14,11 @@ header {
     top: 0;
     left: 0;
     height: 60px;
-    width: 100%;
+    width: 400px;
     font-size: 50px;
     padding-left: 20px;
     padding-top: 10px;
-    padding-bottom: 25px;
+    margin-bottom: 25px;
 }
 
 nav {
@@ -27,9 +27,15 @@ nav {
   padding-right: 35px;
 }
 
+.container {
+  width:700px;
+  margin: 50px auto;
+  text-align:center;
+}
+
 .all_container {
   width:100%;
-  margin: 50px auto;
+  margin: 90px auto;
   padding-top: 20px;
   text-align:center;
 }
@@ -82,7 +88,13 @@ nav {
   font-family: arapey, sans-serif;
 }
 
-
+.ask_q {
+  position: fixed;
+  top: 18px;
+  right: 10px;
+  font-size: 22px;
+  font-family: arapey, sans-serif;
+}
 
 /*
  dark blue #002E40

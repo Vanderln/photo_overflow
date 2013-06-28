@@ -16,6 +16,8 @@ PhotoOverflow::Application.routes.draw do
     resources :comments
   end
 
+  get '/ask' => 'questions#ask_question', as: :ask_question
+
   get '/login'   => 'sessions#new'
   post '/login'  => 'sessions#create'
   get '/logout'  => 'sessions#destroy'
