@@ -7,7 +7,8 @@ class QuestionsController < ApplicationController
   end
 
   def create
-    Question.create(:file => params[:file], :title => params[:title], :content =>params[:content])
+    p params.inspect
+    Question.create(:file => params[:file], :title => params[:title], :content =>params[:content], :user_id => current_user.id)
     redirect_to questions_path
   end
 
