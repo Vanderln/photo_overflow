@@ -1,8 +1,9 @@
-<div class="container">
-  <%= form_for @answer, :multipart => true, url: question_answers_path(@question) do |f| %>
-    <%= f.file_field :file %>
-    <%= f.hidden_field :question_id, value: @question.id %>
-    <p><%= f.text_area :content, rows: 4 , cols: 25, placeholder: 'Add add"l info here!'  %></p>
-    <%= f.submit "Submit Answer" %>
-  <% end %>
+<div class="answer_form">
+<span class="answer_form_intro">Add an answer here. You can upload a photo with your answer too. </span>
+<%= form_for @answer, :multipart => true, url: question_answers_path(@question) do |f| %>
+  <%= f.file_field :file %>
+  <%= f.hidden_field :question_id, value: @question.id %>
+  <%= f.text_area :content, rows: 4 , cols: 25, placeholder: 'Add add"l info here!'  %>
+  <%= f.submit "Submit Answer" %>
+<% end %>
 </div>
