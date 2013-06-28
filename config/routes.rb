@@ -4,14 +4,14 @@ PhotoOverflow::Application.routes.draw do
   resources :users
 
   resources :questions do
-    resources :answers 
+    resources :answers
   end
-  
+
   resources :questions, only: [] do
     resources :comments
     resources :votes
   end
-  
+
   resources :answers, only: [] do
     resources :comments
   end
