@@ -1,32 +1,28 @@
+<%= stylesheet_link_tag "user_profile" %>
+<div class="main_content">
 <h1> Account Page </h1>
-<br>
-<br>
-<br>
-<div class="subnavbar_user_profile">
-  <p><%= link_to "Summary", root_path %></p>
-  <p><%= link_to "My Questions", root_path %></p>
-  <p><%= link_to "My Answers", root_path %></p>
-  <p><%= link_to "My Tabs", root_path %></p>
-<div>
-<br>
-<br>
+<h2> Summary for <%= @current_user.username%> </h2>
 
-<!-- # Profile Page
-# Welcome Username
-# Tabs: Summary, My Questions, My Answers, My Tabs(to come), Edit
-# User Info
-# Widget Page -->
+<%= render partial: "subnav"%>
+<%= render partial: "userstats"%>
 
-<!-- # Questions Main Page (Limit 10) -->
+
+<p> My Latest 5 Questions </p>
+<hr>
 <% if @questions %>
-  <%= render @questions.reverse %>
+  <%= render @questions.reverse.shift(5) %>
+<% else %>
+  <p> You have not yet asked a question </p>
+<% end %>
+
+<hr>
+<p> My Latest 5 Answers </p>
+<hr>
+<% if @myanswers %>
+  <%= render :partial => "myanswer", :collection => @myanswers.reverse.shift(5) %>
 <% else %>
   <p> You have not yet asked a question </p>
   <!-- Link to ask a question now -->
 <% end %>
+</div>
 
-<!-- # Answers Main Page (Limit 10)
-# To come -->
-
-<!-- # Comments Main Page (Limit 10)
-# To come -->
