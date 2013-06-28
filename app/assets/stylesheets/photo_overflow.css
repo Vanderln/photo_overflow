@@ -86,6 +86,8 @@ nav {
 
 .description {
   font-family: arapey, sans-serif;
+  border-bottom: 1px dotted gray;
+  margin-top: 10px;
 }
 
 .ask_q {

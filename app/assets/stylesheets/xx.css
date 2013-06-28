@@ -29,7 +29,7 @@ fieldset, img {
     border: 0;
 }
 
-input, textarea, select, button {
+.user_creation input, textarea, select, button {
     font-family: arapey, sans-serif;
     font-size: 110%;
     line-height: 1.1;
@@ -84,8 +84,8 @@ header a:hover {
 }
 
 .answer_form {
-  float: right;
-  width: 80%;
+  border-top: 1px dotted gray;
+  width: 100%;
   margin: 20px auto;
   font-size: 14px;
   line-height: 18px;
@@ -99,18 +99,17 @@ header a:hover {
 .answer_form input[type="text"] {
   margin-bottom: 20px;
   margin-left: 10px;
-  width: 300px;
 }
 
-.answer_form input[type="textarea"] {
+/*.answer_form input[type="textarea"] {
   margin-bottom: 20px;
   margin-left: 10px;
   width: 300px;
-}
+}*/
 
-.answer_form label {
+/*.answer_form label {
   margin-right: 20px;
-}
+}*/
 
 .result-image.example { display: none;}
 .result-image {
@@ -166,6 +165,14 @@ input[type=submit]:hover {
   margin-left: 50px;
 }
 
+.comment-input {
+  position: relative;
+  float:left;
+}
+
+.comment-submit {
+  float: right;
+}
 /*  COLORS  
 
 --- Navy Sunrise ---
