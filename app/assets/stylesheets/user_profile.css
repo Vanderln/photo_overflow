@@ -1,0 +1,18 @@
+.subnavbar_user_profile {
+  /*background-color: red;*/
+  border-top: 1px solid gray;
+  border-bottom: 1px solid gray;
+  /*height: 50px;*/
+  padding-top: 10px;
+  padding-bottom: 10px;
+  /*display: none;*/
+}
+
+.link_user_nav {
+  margin-left: 20px;
+  font-size: 20px;
+}
+
+.main_content {
+  margin-top: 120px;
+}

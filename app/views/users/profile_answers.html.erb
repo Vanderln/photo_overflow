@@ -1,0 +1,14 @@
+<%= stylesheet_link_tag "user_profile" %>
+<div class="main_content">
+<h1> Account Page </h1>
+<h2> Answers of <%= @current_user.username%> </h2>
+<%= render partial: "subnav"%>
+
+<% if @answers %>
+  <%= render :partial => "myanswer", :collection => @answers.reverse.shift(5) %>
+<% else %>
+  <p> You have not yet asked a question </p>
+  <!-- Link to ask a question now -->
+<% end %>
+</div>
+

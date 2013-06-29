@@ -1,0 +1,7 @@
+<div>
+  <span>
+    <%= link_to question.title, question_path(question.id) %>
+  </span></div>
+  <div class="photo_upload">
+  <img src="<%= question.path || question.file.thumb %>">
+</div>
